@@ -4,7 +4,7 @@
 
 /******************************/
 //#define CONFIG_NEXUS5
-#define CONFIG_NEXUS4
+//#define DEVICE "NEXUS5"
 /******************************/
 
 
@@ -37,9 +37,14 @@
     #define USE_SEEK_ZERO
 #endif
 
+#ifndef DEVICE
+    #error "NO device config defined, please check README"
+#endif
+
 
 #if !defined(FLAT_MEM) && !defined(SPARSE_MEM)
     #error "Unsupported Memory Module!"
 #endif
+
 
 #endif
