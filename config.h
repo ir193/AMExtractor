@@ -2,10 +2,12 @@
 #define _KMEM_CONFIG_H
 
 
-/******************************/
 #define CONFIG_NEXUS5
 #define DEVICE "CONFIG_NEXUS5"
-/******************************/
+
+//#define CONFIG_NEXUS5
+//#define DEVICE "NEXUS5"
+
 
 
 #ifdef CONFIG_GALAXY_NEXUS
@@ -34,7 +36,8 @@
 
 #ifdef CONFIG_SM_G3508I
     #define FLAT_MEM
-
+    #define CONFIG_IOMEM 0xC4C04668
+    #define CONFIG_MEMMAP 0xC4D6C9E0
     #define STRUCT_PAGE_SIZE 32
     #define USE_SEEK_ZERO
 #endif

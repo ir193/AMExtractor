@@ -100,8 +100,11 @@ void setup(){
 
 
     _printk    = kallsyms_get_symbol_address("printk");
+#ifdef CONFIG_IOMEM
+    _iomem_resource = CONFIG_IOMEM;
+#else
     _iomem_resource = kallsyms_get_symbol_address("iomem_resource");
-
+#endif
     _kmap      = kallsyms_get_symbol_address("kmap");
     _kunmap    = kallsyms_get_symbol_address("kunmap");
     //_pfn_valid = kallsyms_get_symbol_address("pfn_valid");
