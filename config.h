@@ -3,20 +3,22 @@
 
 
 /******************************/
-//#define CONFIG_NEXUS5
-//#define DEVICE "NEXUS5"
+#define CONFIG_NEXUS5
+#define DEVICE "CONFIG_NEXUS5"
 /******************************/
 
 
-
-
+#ifdef CONFIG_GALAXY_NEXUS
+    #define FLAT_MEM
+    #define STRUCT_PAGE_SIZE 32
+    #define USE_SEEK_ZERO
+#endif
 
 #ifdef CONFIG_NEXUS4
     #define SPARSE_MEM
     #define STRUCT_PAGE_SIZE 32
     #define USE_SYNC_PTMX
 #endif
-
 
 #ifdef CONFIG_NEXUS5
     #define FLAT_MEM

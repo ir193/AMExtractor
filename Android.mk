@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := main.c kmem.c kallsyms.c kernel_tcp.c kernel_pfn.c
 
-LOCAL_MODULE := kmem
+LOCAL_MODULE := AMExtractor
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_CFLAGS += -Os -fPIE
